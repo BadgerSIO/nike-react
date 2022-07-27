@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nike React</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- flowbite link  -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css"
+    />
+    <!-- google fonts link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              bebas: "'Bebas Neue', cursive",
+              roboto: "'Roboto', sans-serif",
+            },
+            colors: {
+              clifford: "#da373d",
+              pgPr: "#FA804C",
+              pgbtn: "#3D4FF3",
+              pgtitle: "#363958",
+              pgsub: "#3E3E3E",
+              pgbg2: "#f1f1f1",
+              pgbg1: "#FFFBF0",
+            },
+            boxShadow: {
+              pgprsh: "0px 10px 30px rgba(0, 0, 0, 0.1)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-roboto">
+    <header class="bg-pgbg1">
+      <nav class="bg-transparent px-2 sm:px-4 py-2.5 rounded">
+        <div
+          class="container px-5 flex flex-wrap justify-between items-center mx-auto"
+        >
+          <a href="https://flowbite.com/" class="flex items-center">
+            <img
+              src="icons/Logo.png"
+              class="mr-3 h-6 sm:h-9"
+              alt="Flowbite Logo"
+            />
+          </a>
+          <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul
+              class="flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section id="home" class="py-16 md:py-20">
+        <div
+          class="container mx-auto px-5 md:flex items-center flex-row-reverse"
+        >
+          <div class="homeright flex-1">
+            <h1
+              class="font-bebas text-pgtitle text-5xl md:text-6xl xl:text-8xl drop-shadow-md text-center md:text-left"
+            >
+              <span class="text-pgPr">Nike React<br /></span> infinity run 2
+            </h1>
+            <p
+              class="text-sm md:text-base lg:text-xl font-sans text-pgsub pb-5 pt-3 text-center md:text-left"
+            >
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+            <button class="mx-auto block md:mx-0">
+              <a
+                href="#"
+                class="py-2 px-4 md:py-4 md:px-8 bg-pgbtn hover:shadow-sm hover:bg-pgPr inline-block text-white text-sm md:text-base font-semibold uppercase rounded-xl shadow-md transition duration-150 ease-in-out hover:scale-95"
+                ><span class="pr-1"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 inline"
+                    viewBox="0 0 20 20"
+                    fill="#ffffff"
+                  >
+                    <path
+                      d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                    /></svg></span
+                >Buy Now</a
+              >
+            </button>
+          </div>
+          <div class="homeleft flex-1">
+            <img src="images/nike.png" alt="" class="w-9/12 mx-auto md:mx-0" />
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section id="products" class="py-16 md:py20">
+        <div class="container mx-auto px-5">
+          <div class="casual">
+            <h1
+              class="font-bebas text-4xl md:text-6xl text-pgtitle uppercase text-center md:text-left pb-10"
+            >
+              <span class="text-pgPr">casual</span> shoes
+            </h1>
+            <div
+              class="shoes grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10"
+            >
+              <div
+                class="shoe border border-gray rounded-3xl p-5 hover:border-white hover:shadow-pgprsh transition-shadow duration-300 ease-in"
+              >
+                <div class="shoeimg border border-gray bg-pgbg2 rounded-3xl">
+                  <img
+                    src="images/shoe1.png"
+                    alt=""
+                    class="w-96 h-96 mx-auto md:hover:rotate-12 md:hover:scale-150 transition-transform"
+                  />
+                </div>
+                <div class="shoeinfo py-5">
+                  <h2
+                    class="text-2xl lg:text-3xl pb-3 text-pgtitle capitalize font-bold"
+                  >
+                    Nike Shoe
+                  </h2>
+                  <p class="text-base text-pgsub font-medium">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptates, nam.
+                  </p>
+                </div>
+                <div class="shoeprice flex items-center justify-between">
+                  <h3 class="text-pgPr text-4xl font-black">$234</h3>
+                  <button>
+                    <a
+                      href="#"
+                      class="py-2 px-4 md:py-4 md:px-8 bg-pgbtn hover:shadow-sm hover:bg-pgPr inline-block text-white text-sm md:text-base font-semibold uppercase rounded-xl shadow-md transition duration-150 ease-in-out hover:scale-95"
+                      ><span class="pr-1"
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5 inline"
+                          viewBox="0 0 20 20"
+                          fill="#ffffff"
+                        >
+                          <path
+                            d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                          /></svg></span
+                      >Buy Now</a
+                    >
+                  </button>
+                </div>
+              </div>
+              <div
+                class="shoe flex flex-col border border-gray rounded-3xl p-5 hover:border-white hover:shadow-pgprsh transition-shadow duration-300 ease-in"
+              >
+                <div class="shoeimg border border-gray bg-pgbg2 rounded-3xl">
+                  <img
+                    src="images/shoe2.png"
+                    alt=""
+                    class="w-96 h-96 mx-auto md:hover:rotate-12 md:hover:scale-150 transition-transform"
+                  />
+                </div>
+                <div class="shoeinfo py-5">
+                  <h2
+                    class="text-2xl lg:text-3xl pb-3 text-pgtitle capitalize font-bold"
+                  >
+                    Nike Shoe
+                  </h2>
+                  <p class="text-base text-pgsub font-medium">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatum, illum.
+                  </p>
+                </div>
+                <div class="shoeprice flex items-center justify-between">
+                  <h3 class="text-pgPr text-4xl font-black">$234</h3>
+                  <button>
+                    <a
+                      href="#"
+                      class="py-2 px-4 md:py-4 md:px-8 bg-pgbtn hover:shadow-sm hover:bg-pgPr inline-block text-white text-sm md:text-base font-semibold uppercase rounded-xl shadow-md transition duration-150 ease-in-out hover:scale-95"
+                      ><span class="pr-1"
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5 inline"
+                          viewBox="0 0 20 20"
+                          fill="#ffffff"
+                        >
+                          <path
+                            d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                          /></svg></span
+                      >Buy Now</a
+                    >
+                  </button>
+                </div>
+              </div>
+              <div
+                class="shoe flex flex-col border border-gray rounded-3xl p-5 hover:border-white hover:shadow-pgprsh transition-shadow duration-300 ease-in"
+              >
+                <div
+                  class="shoeimg flex-2 border border-gray bg-pgbg2 rounded-3xl"
+                >
+                  <img
+                    src="images/shoe3.png"
+                    alt=""
+                    class="w-96 h-96 mx-auto md:hover:rotate-12 md:hover:scale-150 transition-transform"
+                  />
+                </div>
+                <div class="shoeinfo py-5">
+                  <h2
+                    class="text-2xl lg:text-3xl pb-3 text-pgtitle capitalize font-bold"
+                  >
+                    Nike Shoe
+                  </h2>
+                  <p class="text-base text-pgsub font-medium">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Eligendi, ullam?
+                  </p>
+                </div>
+                <div class="shoeprice flex items-center justify-between">
+                  <h3 class="text-pgPr text-4xl font-black">$234</h3>
+                  <button>
+                    <a
+                      href="#"
+                      class="py-2 px-4 md:py-4 md:px-8 bg-pgbtn hover:shadow-sm hover:bg-pgPr inline-block text-white text-sm md:text-base font-semibold uppercase rounded-xl shadow-md transition duration-150 ease-in-out hover:scale-95"
+                      ><span class="pr-1"
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5 inline"
+                          viewBox="0 0 20 20"
+                          fill="#ffffff"
+                        >
+                          <path
+                            d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                          /></svg></span
+                      >Buy Now</a
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="formal pt-6 md:pt-10">
+            <h1
+              class="font-bebas text-4xl md:text-6xl text-pgtitle uppercase text-center md:text-left pb-5 pt-7 md:pt-0 md:pb-10"
+            >
+              <span class="text-pgPr">formal</span> shoes
+            </h1>
+            <div
+              class="shoes grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10"
+            >
+              <div
+                class="shoe border border-gray rounded-3xl p-5 hover:border-white hover:shadow-pgprsh transition-shadow duration-300 ease-in"
+              >
+                <div
+                  class="shoeimg border border-gray bg-white overflow-hidden rounded-3xl"
+                >
+                  <img
+                    src="images/shoe4.png"
+                    alt=""
+                    class="w-96 mx-auto md:hover:rotate-12 md:hover:scale-110 transition-transform"
+                  />
+                </div>
+                <div class="shoeinfo py-5">
+                  <h2
+                    class="text-2xl lg:text-3xl pb-3 text-pgtitle capitalize font-bold"
+                  >
+                    Nike Shoe
+                  </h2>
+                  <p class="text-base text-pgsub font-medium">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptates, nam.
+                  </p>
+                </div>
+                <div class="shoeprice flex items-center justify-between">
+                  <h3 class="text-pgPr text-4xl font-black">$234</h3>
+                  <button>
+                    <a
+                      href="#"
+                      class="py-2 px-4 md:py-4 md:px-8 bg-pgbtn hover:shadow-sm hover:bg-pgPr inline-block text-white text-sm md:text-base font-semibold uppercase rounded-xl shadow-md transition duration-150 ease-in-out hover:scale-95"
+                      ><span class="pr-1"
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5 inline"
+                          viewBox="0 0 20 20"
+                          fill="#ffffff"
+                        >
+                          <path
+                            d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                          /></svg></span
+                      >Buy Now</a
+                    >
+                  </button>
+                </div>
+              </div>
+              <div
+                class="shoe border border-gray rounded-3xl p-5 hover:border-white hover:shadow-pgprsh transition-shadow duration-300 ease-in"
+              >
+                <div
+                  class="shoeimg border border-gray bg-white overflow-hidden rounded-3xl"
+                >
+                  <img
+                    src="images/shoe5.png"
+                    alt=""
+                    class="w-96 mx-auto md:hover:rotate-12 md:hover:scale-110 transition-transform"
+                  />
+                </div>
+                <div class="shoeinfo py-5">
+                  <h2
+                    class="text-2xl lg:text-3xl pb-3 text-pgtitle capitalize font-bold"
+                  >
+                    Nike Shoe
+                  </h2>
+                  <p class="text-base text-pgsub font-medium">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatum, illum.
+                  </p>
+                </div>
+                <div class="shoeprice flex items-center justify-between">
+                  <h3 class="text-pgPr text-4xl font-black">$234</h3>
+                  <button>
+                    <a
+                      href="#"
+                      class="py-2 px-4 md:py-4 md:px-8 bg-pgbtn hover:shadow-sm hover:bg-pgPr inline-block text-white text-sm md:text-base font-semibold uppercase rounded-xl shadow-md transition duration-150 ease-in-out hover:scale-95"
+                      ><span class="pr-1"
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5 inline"
+                          viewBox="0 0 20 20"
+                          fill="#ffffff"
+                        >
+                          <path
+                            d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                          /></svg></span
+                      >Buy Now</a
+                    >
+                  </button>
+                </div>
+              </div>
+              <div
+                class="shoe border border-gray rounded-3xl p-5 hover:border-white hover:shadow-pgprsh transition-shadow duration-300 ease-in"
+              >
+                <div
+                  class="shoeimg border border-gray bg-white overflow-hidden rounded-3xl"
+                >
+                  <img
+                    src="images/shoe6.png"
+                    alt=""
+                    class="w-96 mx-auto md:hover:rotate-12 md:hover:scale-110 transition-transform"
+                  />
+                </div>
+                <div class="shoeinfo py-5">
+                  <h2
+                    class="text-2xl lg:text-3xl pb-3 text-pgtitle capitalize font-bold"
+                  >
+                    Nike Shoe
+                  </h2>
+                  <p class="text-base text-pgsub font-medium">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Eligendi, ullam?
+                  </p>
+                </div>
+                <div class="shoeprice flex items-center justify-between">
+                  <h3 class="text-pgPr text-4xl font-black">$234</h3>
+                  <button>
+                    <a
+                      href="#"
+                      class="py-2 px-4 md:py-4 md:px-8 bg-pgbtn hover:shadow-sm hover:bg-pgPr inline-block text-white text-sm md:text-base font-semibold uppercase rounded-xl shadow-md transition duration-150 ease-in-out hover:scale-95"
+                      ><span class="pr-1"
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5 inline"
+                          viewBox="0 0 20 20"
+                          fill="#ffffff"
+                        >
+                          <path
+                            d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                          /></svg></span
+                      >Buy Now</a
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="pb-8 md:pb-20">
+        <div
+          class="container mx-auto px-5 md:flex flex-row-reverse items-center"
+        >
+          <div class="contact-right flex-1 md:pl-8 mb-10 md:mb-0">
+            <img
+              src="images/shopping.png"
+              alt="contact us part"
+              class="w-full"
+            />
+          </div>
+          <div class="contact-left flex-1 my-auto lg:pr-28 2xl:pr-52">
+            <div
+              class="cbox md:flex bg-white border border-gray hover:border-white hover:shadow-pgprsh transition-shadow duration-300 ease-in mb-7 py-5 px-7 text-center md:text-left rounded-3xl"
+            >
+              <div class="cboximg pb-4 md:pb-0">
+                <img
+                  src="images/house.png"
+                  alt=""
+                  class="w-20 mx-auto md:mx-0"
+                />
+              </div>
+              <div class="cboxdes md:pl-6">
+                <h2 class="text-lg md:text-2xl font-bold text-pgtitle pb-3">
+                  Find the Perfect Fit
+                </h2>
+                <p>
+                  Everybody is different, which is why we offer styles for every
+                  body.
+                </p>
+              </div>
+            </div>
+            <div
+              class="cbox md:flex bg-white border border-gray hover:border-white hover:shadow-pgprsh transition-shadow duration-300 ease-in mb-7 py-5 px-7 text-center md:text-left rounded-3xl"
+            >
+              <div class="cboximg pb-4 md:pb-0">
+                <img src="images/box.png" alt="" class="w-20 mx-auto md:mx-0" />
+              </div>
+              <div class="cboxdes md:pl-6">
+                <h2 class="text-lg md:text-2xl font-bold text-pgtitle pb-3">
+                  Free Exchanges
+                </h2>
+                <p>One of the many reasons you can shop with peace of mind.</p>
+              </div>
+            </div>
+            <div
+              class="cbox md:flex bg-white border border-gray hover:border-white hover:shadow-pgprsh transition-shadow duration-300 ease-in mb-7 py-5 px-7 text-center md:text-left rounded-3xl"
+            >
+              <div class="cboximg pb-4 md:pb-0">
+                <img
+                  src="images/question.png"
+                  alt=""
+                  class="w-20 mx-auto md:mx-0"
+                />
+              </div>
+              <div class="cboxdes md:pl-6">
+                <h2 class="text-lg md:text-2xl font-bold text-pgtitle pb-3">
+                  Contact Our Seller
+                </h2>
+                <p>
+                  They are here to help you. That's quite literally what we pay
+                  them for.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
+  </body>
+</html>
